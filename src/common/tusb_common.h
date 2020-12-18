@@ -92,8 +92,8 @@ static inline uint16_t tu_u16(uint8_t high, uint8_t low)
   return (uint16_t)((((uint16_t) high) << 8) + low);
 }
 
-static inline uint8_t tu_u16_high(uint16_t u16) { return (uint8_t) (((uint16_t) (u16 >> 8)) & 0x00ff); }
-static inline uint8_t tu_u16_low (uint16_t u16) { return (uint8_t) (u16 & 0x00ff); }
+static inline uint8_t tu_u16_high(uint16_t u16_high) { return (uint8_t) (((uint16_t) (u16_high >> 8)) & 0x00ff); }
+static inline uint8_t tu_u16_low (uint16_t u16_low) { return (uint8_t) (u16_low & 0x00ff); }
 
 // Min
 static inline uint8_t  tu_min8  (uint8_t  x, uint8_t y ) { return (x < y) ? x : y; }
